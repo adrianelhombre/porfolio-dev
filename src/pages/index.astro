@@ -1,15 +1,18 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Badge from "../components/Badge.astro";
-import LinkedInIcon from "../components/icons/LinkedIn.astro";
-import GitHubIcon from "../components/icons/GitHub.astro";
-import SocialPill from "../components/SocialPill.astro";
-import MailIcon from "../components/icons/Mail.astro";
-import Experiencie from "../components/Experiencie.astro";
+import Experience from "../components/Experience.astro";
 import SectionContainer from "../components/SectionContainer.astro";
-import BriefcaseIcon from "../components/icons/Briefcase.astro"
-import CodeIcon from "../components/icons/Code.astro"
+import BriefcaseIcon from "../components/icons/Briefcase.astro";
+import CodeIcon from "../components/icons/Code.astro";
 import Projects from "../components/Projects.astro";
+import Hero from "../components/Hero.astro";
+import EducationIcon from "../components/icons/Education.astro";
+import CheckIcon from "../components/icons/Check.astro";
+import Stack from "../components/Stack.astro"
+import Education from "../components/Education.astro";
+import ProjectsSection from "../components/ProjectsSection.astro";
+import Banner from "../components/Banner.astro";
+
 ---
 
 <Layout
@@ -17,57 +20,57 @@ import Projects from "../components/Projects.astro";
   description="Contrata a adrian elhombre para crear tus aplicaciones web"
 >
   <main class="px-4">
-
-    <SectionContainer class="py-44 pb-24">
-      <img
-        class="rounded-full size-12 mb-4"
-        src="https://avatars.githubusercontent.com/u/128483393?v=4"
-        alt="logo porfolio"
-      />
-      <h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">
-        <span> Hey, <span class="text-yellow-200">I'm</span> Adrian</span>
-        <div class="flex justify-center items-center">
-          <Badge>Disponible para trabajar</Badge>
-        </div>
-      </h1>
-      <h2 class="text-xl lg:text-2xl opacity-80 text-wrap max-w-[700px]">
-        +1 año de experiencia. Desarrollador Web y Creador de Contenido. De
-        Zaragoza, España
-      </h2>
-
-      <nav class="flex gap-4 mt-6 flex-wrap">
-        <SocialPill href="/linkedin">
-          <LinkedInIcon class="size-4 md:size-6" />
-          LinkedIn
-        </SocialPill>
-        <SocialPill href="/github">
-          <GitHubIcon class="size-4 md:size-6" />
-          GitHub
-        </SocialPill>
-        <SocialPill href="/mail">
-          <MailIcon class="size-4 md:size-6" />
-          adrianelhombrehernandez@gmail.com
-        </SocialPill>
-      </nav>
-
+    <SectionContainer class="flex min-h-screen">
+      <Hero />
     </SectionContainer>
+  
 
-		<SectionContainer id="experiencia">
-			<h2 class="text-3xl font-semibol mb-6 flex gap-x-3 items-center">
-				<BriefcaseIcon class="size-7" />
-				Experiencia Laboral
-			</h2>
-			<Experiencie />
-		</SectionContainer>
-		
-		<SectionContainer id="proyectos">
-			<h2 class="text-3xl font-semibol mb-6 flex gap-x-3 items-center">
-				<CodeIcon class="size-7" />
-				Proyectos
-			</h2>
-			<Projects />
-		</SectionContainer>
+  <SectionContainer class="scroll-section py-24">
+    <div class="container py-10 rounded-lg">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <CheckIcon class="size-7" />
+        Tech Stack
+      </h2>
+      <Stack />
+      </ul>
 
-		
-  </main>
+    </div>
+  </SectionContainer>
+
+  <SectionContainer
+    id="experiencia"
+    class="min-h-screen py-48"
+  >
+    <div class="container mb-40 scroll-section">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <BriefcaseIcon class="size-7" />
+        Experiencia Laboral
+      </h2>
+      <Experience />
+    </div>
+
+    <div class="container scroll-section">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <EducationIcon class="size-7" />
+        Estudios
+      </h2>
+      <Education />
+    </div>
+  </SectionContainer>
+
+  <SectionContainer
+    id="proyectos"
+    class="py-36 "
+  >
+    <h2 class="text-3xl font-semibol mb-6 flex gap-x-3 items-center scroll-section">
+      <CodeIcon class="size-7" />
+      Proyectos
+    </h2>
+    <ProjectsSection />
+  </SectionContainer>
+
+
+
+
+</main>
 </Layout>

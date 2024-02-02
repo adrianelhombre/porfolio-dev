@@ -1,0 +1,32 @@
+---
+
+import { STACKS, FRAMEWORKS } from "../data/StacksData.astro"
+
+---
+
+<div class="container flex flex-col gap-8 items-center">
+
+  <div class="grid grid-cols-4 lg:grid-cols-8 gap-8 w-full">
+    {
+      Object.values(STACKS).map((stack) => ( 
+          <figure class="flex flex-col items-center ">
+            <stack.icon class="size-16 hover:scale-110 transition-all duration-500 grayscale-[70%] hover:grayscale-0" />
+            <span class="text-center">{stack.name}</span>     
+          </figure>
+      ))
+    }
+  </div>
+  
+  <div class="grid grid-cols-4 lg:grid-cols-8 gap-6 w-full">
+    {
+      Object.values(FRAMEWORKS).map((framework) => ( 
+          <figure class="flex flex-col items-center">
+            <framework.icon class="size-16 hover:scale-110 transition-all duration-500 grayscale-[50%] hover:grayscale-0" />
+            <span class="text-center">{framework.name}</span>     
+          </figure>
+      ))
+    }
+  </div>
+
+</div>
+

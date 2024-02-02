@@ -1,0 +1,57 @@
+---
+import Badge from "../components/Badge.astro";
+import LinkedInIcon from "../components/icons/LinkedIn.astro";
+import MailIcon from "../components/icons/Mail.astro";
+import SocialPill from "../components/SocialPill.astro";
+import GitHubIcon from "./stack/GitHub.astro";
+---
+
+<div
+  class="max-w-3xl my-auto mx-auto animate-fade-down animate-once animate-delay-200"
+>
+  <h1
+    class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-5 items-end"
+  >
+    <span class="pr-6"> Hey, I'm</span>
+    <div class="flex items-center">
+      <Badge>Disponible para trabajar</Badge>
+    </div>
+    <div>
+      <img
+        class="hidden md:block size-24 md:size-36 lg:size-48 mb-1"
+        src="assets/avatar.webp"
+        alt="logo porfolio"
+      />
+    </div>
+  </h1>
+  <span
+    class="class=
+    text-5xl
+    md:text-7xl
+    font-extrabold
+    bg-clip-text
+    text-transparent
+    bg-[linear-gradient(to_right,theme(colors.indigo.400),theme(colors.indigo.100),theme(colors.sky.400),theme(colors.fuchsia.400),theme(colors.sky.400),theme(colors.indigo.100),theme(colors.indigo.400))]
+    bg-[length:200%_auto]
+    animate-gradient"
+    >Adrian Elhombre</span
+  >
+  <h2 class="font-bold text-xl md:text-3xl opacity-80 text-wrap max-w-[700px]">
+    Web developer based in Zaragoza, Spain.
+  </h2>
+
+  <nav class="flex gap-4 mt-6 flex-wrap">
+    <SocialPill href="/linkedin">
+      <LinkedInIcon class="size-4 md:size-6" />
+      LinkedIn
+    </SocialPill>
+    <SocialPill href="/github">
+      <GitHubIcon class="size-4 md:size-6" />
+      GitHub
+    </SocialPill>
+    <SocialPill href="/mail">
+      <MailIcon class="size-4 md:size-6" />
+      adrianelhombrehernandez@gmail.com
+    </SocialPill>
+  </nav>
+</div>
