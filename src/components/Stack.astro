@@ -10,7 +10,7 @@ import { STACKS, FRAMEWORKS } from "../data/StacksData.astro"
     {
       Object.values(STACKS).map((stack) => ( 
           <figure class="flex flex-col items-center ">
-            <stack.icon class="size-16 hover:scale-110 transition-all duration-500 grayscale-[70%] hover:grayscale-0" />
+            <stack.icon class="size-16 hover:scale-110 transition-all duration-500" />
             <span class="text-center">{stack.name}</span>     
           </figure>
       ))
@@ -21,7 +21,7 @@ import { STACKS, FRAMEWORKS } from "../data/StacksData.astro"
     {
       Object.values(FRAMEWORKS).map((framework) => ( 
           <figure class="flex flex-col items-center">
-            <framework.icon class="size-16 hover:scale-110 transition-all duration-500 grayscale-[50%] hover:grayscale-0" />
+            <framework.icon class="size-16 hover:scale-110 transition-all duration-500" />
             <span class="text-center">{framework.name}</span>     
           </figure>
       ))

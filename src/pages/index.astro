@@ -11,6 +11,8 @@ import Stack from "../components/Stack.astro"
 import Education from "../components/Education.astro";
 import ProjectsSection from "../components/ProjectsSection.astro";
 import Banner from "../components/Banner.astro";
+import Badge from "../components/Badge.astro";
+import SectionContainerXL from "../components/SectionContainerXL.astro";
 
 ---
 
@@ -36,6 +38,7 @@ import Banner from "../components/Banner.astro";
     </div>
   </SectionContainer>
 
+
   <SectionContainer
     id="experiencia"
     class="min-h-screen py-48"
@@ -57,17 +60,18 @@ import Banner from "../components/Banner.astro";
     </div>
   </SectionContainer>
 
-  <SectionContainer
+  <SectionContainerXL
     id="proyectos"
-    class="py-36 "
+    class="py-36"
   >
     <h2 class="text-3xl font-semibol mb-6 flex gap-x-3 items-center scroll-section">
       <CodeIcon class="size-7" />
       Proyectos
     </h2>
     <ProjectsSection />
-  </SectionContainer>
+  </SectionContainerXL>
 
+ 
 
 
 

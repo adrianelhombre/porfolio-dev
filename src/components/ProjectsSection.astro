@@ -7,12 +7,12 @@ import GitHub from "./stack/GitHub.astro";
 ---
 
 <section
-  class="w-full mt-8 p-0 grid lg:grid-cols-10 auto-rows-[30rem] gap-6 mx-auto"
+  class="w-full mt-8 p-0 grid grid-cols-10 auto-rows-[30rem] gap-6 mx-auto"
 >
 {
-  Object.values(PROJECTS).map(({ title, description, link, github, image, tags }) => (
+  Object.values(PROJECTS).map(({ title, description, link, github, image, tags, columns }) => (
   <article
-    class="col-span-10 md:col-span-5 relative rounded-xl backdrop-blur-md border border-white/10 shadow-inner shadow-black/10 overflow-hidden group"
+    class={`col-span-10 lg:col-span-${columns} relative rounded-xl backdrop-blur-md border border-white/10 shadow-inner shadow-black/10 overflow-hidden group`}
   >
     <div
       class="absolute bottom-0 top-0 z-10 h-full w-full bg-gradient-to-b from-transparent from-40% via-[#000]/50 to-[#000]/80"
@@ -33,9 +33,6 @@ import GitHub from "./stack/GitHub.astro";
       >
         {title}
       </h2>
-      <h3 class="-mt-4  text-lg font-semibold text-sky-200/80">
-        Junio 2022
-      </h3>
       <p class="max-w-xl text-base md:text-md text-white">
         {description}
       </p>
