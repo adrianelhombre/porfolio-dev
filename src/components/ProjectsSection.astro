@@ -13,9 +13,10 @@ import GitHub from "./stack/GitHub.astro";
   class="w-full mt-8 p-0 grid grid-cols-10 auto-rows-[30rem] gap-6 mx-auto"
 >
 {
-  Object.values(PROJECTS).map(({ title, description, link, github, image, tags, columns }) => (
+  Object.values(PROJECTS).map(({ title, description, link, github, image, tags }) => (
   <article
-    class={`col-span-10 lg:col-span-${columns} relative rounded-xl backdrop-blur-md border border-white/10 shadow-inner shadow-black/10 overflow-hidden group`}
+  class="col-span-10 lg:col-span-5 relative rounded-xl backdrop-blur-md border border-white/10 shadow-inner shadow-black/10 overflow-hidden group"
+
   >
     <div
       class="absolute bottom-0 top-0 z-10 h-full w-full bg-gradient-to-b from-transparent from-40% via-[#000]/50 to-[#000]/80"
@@ -32,7 +33,7 @@ import GitHub from "./stack/GitHub.astro";
       class="relative z-20 flex h-full select-none flex-col justify-end gap-1 p-2 text-lg md:p-6"
     >
       <h2
-        class="mb-2 text-balance text-xl font-bold uppercase text-yellow-200"
+        class="text-balance text-xl font-bold uppercase text-yellow-200"
       >
         {title}
       </h2>

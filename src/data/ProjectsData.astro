@@ -3,35 +3,32 @@
 import { STACKS, FRAMEWORKS } from "./StacksData.astro";
 
 export const PROJECTS = {
- SVGL: {
+  TFG: {
+    title: "fballcoach - TFG",
+    description:
+      "Pagina web creada para el Trabajo de Final de Grado que cuenta con un login y un CRUD para que el usuario pueda tener su propia biblioteca de ejercicios de futbol.",
+    link: "http://adrianelhombre.x10.mx/index.php",
+    github: "https://github.com/adrianelhombre/proyectoDaw",
+    image: "/projects/fballcoach.webp",
+    tags: [STACKS.HTML, STACKS.CSS, STACKS.JAVASCRIP, STACKS.PHP],
+  },
+   MOVIES: {
     title: "Movies search",
     description:
       "Pequeño proyecto que desarolle para trabajar con los principales hooks de React, haciendo el fetching de datos desde una API externa.",
-    link: "https://svgl.vercel.app/",
+    link: "https://adrianeh-movies-search.netlify.app/",
     github: "https://github.com/adrianelhombre/movies-search.git",
     image: "/projects/buscadorPelis.webp",
     tags: [STACKS.HTML, STACKS.CSS, STACKS.JAVASCRIP, FRAMEWORKS.REACT],
-    columns: 6
   },
-  SVGLS: {
-    title: "Project",
+  PAGE: {
+    title: "Crea tu pagina",
     description:
-      "Biblioteca de logos SVG de las marcas más populares. +10k visitas al mes. +2K svgs descargados. Creado desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://svgl.vercel.app/",
-    github: "https://github.com/pheralb/svgl",
-    image: "/projects/svgl.webp",
-    tags: [STACKS.HTML, STACKS.CSS],
-    columns: 4
-  },
-  SVGL3: {
-    title: "SVGL - A beautiful library with SVG logos",
-    description:
-      "Biblioteca de logos SVG de las marcas más populares. +10k visitas al mes. +2K svgs descargados. Creado desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://svgl.vercel.app/",
-    github: "https://github.com/pheralb/svgl",
-    image: "/projects/porfolio.webp",
-    tags: [STACKS.HTML, STACKS.CSS, STACKS.JAVASCRIP],
-    columns: 4
+      "Proyecto final del Master en programación dieño web y eperiencia de usuario UX/UI de MasterD. Pagina web utilizando los conocimientos adquiridos durante el curso.",
+    link: "https://adrianelhombre.github.io/crea-tu-pagina/index.html",
+    github: "https://github.com/adrianelhombre/crea-tu-pagina.git",
+    image: "/projects/project.webp",
+    tags: [STACKS.HTML, STACKS.CSS, STACKS.JAVASCRIP, FRAMEWORKS.BOOTSTRAP],
   },
   SVGLS4: {
     title: "Project",
@@ -41,7 +38,6 @@ export const PROJECTS = {
     github: "https://github.com/pheralb/svgl",
     image: "/projects/svgl.webp",
     tags: [STACKS.HTML, STACKS.CSS],
-    columns: 6
   }
 }
 ;
