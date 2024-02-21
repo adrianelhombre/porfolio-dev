@@ -11,48 +11,45 @@ import GitHubIcon from "./stack/GitHub.astro";
 ---
 
 <div
-  class="max-w-3xl my-auto mx-auto flex flex-col items-center text-center w-10/12 animate-fade-down animate-once animate-delay-200"
+  class="max-w-3xl my-auto mx-auto flex flex-col items-center text-center w-11/12 md:w-10/12 animate-fade-down animate-once animate-delay-200"
 >
-  <div>
-    <img
-      class="size-32 md:hidden ml-40 mb-1"
-      src="assets/avatar.webp"
-      alt="logo porfolio"
-    />
-  </div>
 
   <div>
 
     <div
-      class="flex flex-row items-end justify-between "
+      class="flex flex-row justify-between items-end"
     >
+      
       <span 
         class="
         pr-6 
         text-white 
         font-bold 
-        text-[3.5vw] 
-        lg:text-5xl"> Hey, I'm</span>
+        text-[4.5vw]
+        md:text-[3.5vw] 
+        lg:text-5xl"> 
+          Hey, I'm
+      </span>
 
-      <div class="flex items-center">
-        <Badge>Disponible para trabajar</Badge>
-      </div>
-
-      <div>
+      <div class="flex flex-col items-end">
         <img
-          class="hidden md:block md:size-36 lg:ml-0 lg:size-48 mb-1"
+          class="size-[24vw] md:block md:size-36 lg:size-48 mb-1"
           src="assets/avatar.webp"
-          alt="logo porfolio"
-        />
-      </div>
+          alt="logo porfolio"/>
+
+        <Badge>Disponible para trabajar</Badge>
+
+       </div>
+
+      
 
     </div>
     
     <h1
       class="
-      my-[-2.3vw]
+      my-[-3vw]
       lg:my-0
-      text-[8vw]
+      text-[9.5vw]
       md:text-[6.8vw]
       lg:text-7xl
       font-extrabold
@@ -67,7 +64,7 @@ import GitHubIcon from "./stack/GitHub.astro";
     <h2 
       class="
       font-bold 
-      text-[3.2vw]
+      text-[3.75vw]
       md:text-[2.75vw]
       lg:text-3xl 
       opacity-80 
@@ -77,18 +74,25 @@ import GitHubIcon from "./stack/GitHub.astro";
     </h2>
   </div>
 
-  <nav class="flex gap-4 mt-6 flex-wrap justify-center">
+  <nav class="flex gap-4 mt-4 flex-wrap justify-center">
     <SocialPill href="https://www.linkedin.com/in/adrian-elhombre/">
-      <LinkedInIcon class="size-4 md:size-6" />
-      LinkedIn
+      <LinkedInIcon class="size-4 lg:size-6" />
+      <span class="hidden md:block">
+        LinkedIn
+      </span>
     </SocialPill>
     <SocialPill href="https://github.com/adrianelhombre">
-      <GitHubIcon class="size-4 md:size-6" />
-      GitHub
+      <GitHubIcon class="size-4 lg:size-6" />
+      <span class="hidden md:block">
+        GitHub
+      </span>
     </SocialPill>
     <SocialPill href="mailto:adrianelhombrehernandez@gmail.com">
-      <MailIcon class="size-4 md:size-6" />
-      adrianelhombrehernandez@gmail.com
+      <MailIcon class="size-4 lg:size-6" />
+      <span class="hidden md:block">
+        adrianelhombrehernandez@gmail.com
+      </span>
     </SocialPill>
   </nav>
+
 </div>
